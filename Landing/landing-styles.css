@@ -11,8 +11,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -22,27 +22,31 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,24 +54,24 @@ table {
 
 /* CSS RESET END */
 
-body{
-    background-color: rgba(229, 189, 189, 0.5);
+body {
+	background-color: rgba(229, 189, 189, 0.5);
 	font-family: 'Montserrat', sans-serif;
 }
 
-.wrapper{
+.wrapper {
 	margin-left: 70px;
 	margin-right: 70px;
 }
 
-.header{
-	height:15vh;
+.header {
+	height: 15vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-.nav-menu{
+.nav-menu {
 	width: 370px;
 	display: flex;
 	flex-direction: row;
@@ -75,72 +79,123 @@ body{
 	align-items: center;
 }
 
-.nav-item{
+.nav-item {
 	display: flex;
 	font-size: 16px;
 }
 
-.logo{
+.logo {
 	display: flex;
-	height:70px;
+	height: 70px;
 	width: 70px;
 	background-image: url("./logo.svg");
 	align-self: center;
+	background-repeat: no-repeat;
 }
 
-.van-bg{
-	height:85vh;
+.van-bg {
+	height: 85vh;
 	background-position: 20px;
 	background-size: cover;
 	background-image: url("./van");
 	background-repeat: no-repeat;
-	
+
 }
 
-.van-bg-text{
-	padding-top:125px;
+.van-bg-text {
+	padding-top: 125px;
 	padding-left: 125px;
 	font-size: 36px;
 	text-decoration: underline;
 }
 
-#about{
-	height:100vh
+#about {
+	height: 100vh
 }
 
-.title{
+.title {
 	font-size: 30px;
 	margin-top: 30px;
 }
 
-.about-text{
+.about-text {
 	margin-top: 15px;
 	font-size: 20px;
 }
 
-.bigger{
+.bigger {
 	font-size: 20px;
 	font-weight: bolder;
 }
 
-ol{
+ol {
 	font-size: 22px;
 	margin-left: 30px;
 }
 
-li{
+li {
 	margin-top: 12px;
 }
 
-.about-images{
+.about-images {
 	display: flex;
 	margin-top: 15px;
 }
 
-.img1{
+.img1 {
 	width: 800px;
 }
 
-.img2{
+.img2 {
 	width: 650px;
+}
+
+.nav-open {
+	display: none;
+}
+
+.burger-menu {
+	display: none;
+	margin-top: 15vh;
+	position: absolute;
+	width: 90vw;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: rgba(229, 189, 189);
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.opened{
+	display: flex;
+}
+
+@media (max-width:900px) {
+	.nav-item {
+		display: none;
+	}
+
+	.nav-open {
+		display: flex;
+	}
+
+	.van-bg-text {
+		font-size: 24px;
+		padding-top: 25px;
+		padding-left: 25px;
+	}
+
+	.nav-menu {
+		justify-content: end;
+	}
+
+	.logo {
+		height: 50px;
+		width: 50px;
+	}
 }

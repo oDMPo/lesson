@@ -1,3 +1,11 @@
-let title = document.getElementsByClassName('van-bg-text')
+let title = document.querySelector(".van-bg-text");
 
-console.log(title)
+title.innerHTML = "VANLIFE - ЭТО СВОБОДА!";
+
+let burger = document.querySelector(".burger-menu") 
+
+let button = document.querySelector(".nav-open");
+
+button.addEventListener("click", () => {
+    burger.classList.toggle('opened')
+});
