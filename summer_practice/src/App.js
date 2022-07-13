@@ -8,7 +8,7 @@ const App = () => {
   
   return(
 <div className='container'>
-  <Header menu={["Мск", "СПБ"]} />
+  <Header menu={["строчка1", "строчка2"]} />
   <div className='content'>
     <Title/>
     <Map/>
