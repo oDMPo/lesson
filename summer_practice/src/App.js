@@ -1,19 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-import Title from './components/Title';
-import Map from './components/Map';
+import { Routes, Route, Link,} from "react-router-dom"
+import { BrowserRouter as Router } from 'react-router-dom';
+import Moscow from "./components/Moscow"
+import Spb from "./components/Spb"
 
 const App = () => {
-  
-  return(
-<div className='container'>
-  <Header menu={["строчка1", "строчка2"]} />
-  <div className='content'>
-    <Title/>
-    <Map/>
-  </div>
-</div>
+
+  return (
+    <Router>
+      <div className='container'>
+        <Header menu={["Moscow", "Solevoi-city"]} />
+        <div className='content'>
+          <Routes>
+            <Route path="/Moscow/" element={<Moscow />} />
+            <Route path="/Solevoi-city/" element={<Spb />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 

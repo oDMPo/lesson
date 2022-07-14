@@ -1,14 +1,18 @@
+import { Link } from "react-router-dom"
+
 const Header = (props) => {
     return (
         <div className="Header">
-            <div>
+            <div className="logo">
                 <img src="" alt="" className="logo" />
             </div>
-            <div className="nav-bar">
+            <div className="nav">
                 {
                     props.menu.map((ele, index) => {
                         return <div key={index} className="nav-item">
-                            {ele}
+                            <Link to={ele}>
+                                {ele}
+                            </Link>
                         </div>
                     })
                 }
